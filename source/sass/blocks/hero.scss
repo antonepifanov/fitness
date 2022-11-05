@@ -12,11 +12,13 @@
   @include vp-1199 {
     padding-top: 40px;
     padding-bottom: 82px;
+    gap: 25px;
   }
 
   @include vp-767 {
     padding-top: 15px;
     padding-bottom: 78px;
+    gap: 80px;
   }
 }
 
@@ -29,4 +31,18 @@
 .hero__intro {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  padding-left: 122px;
+  padding-right: 303px;
+  padding-top: 21px;
+
+  @include vp-1365 {
+    padding-left: 79px;
+    padding-right: 260px;
+    padding-top: 21px;
+  }
+
+  @include vp-1199 {
+    grid-row: 2 / 3;
+    padding-top: 0;
+  }
 }

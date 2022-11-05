@@ -4,10 +4,6 @@
   align-items: flex-start;
 }
 
-.header__logo {
-  align-self: flex-start;
-}
-
 .header__links {
   display: flex;
   flex-direction: column;
@@ -22,7 +18,7 @@
     font-family: $ff-title;
     font-size: 26px;
     font-weight: 600;
-    line-height: 1.94;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     color: $color-default-white;
     transition: opacity $trans-default;
@@ -30,7 +26,6 @@
     @include vp-1199 {
       font-size: 24px;
       font-weight: 700;
-      line-height: 1.2;
       letter-spacing: 0.02em;
     }
 
