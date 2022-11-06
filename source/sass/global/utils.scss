@@ -36,8 +36,12 @@
   list-style: none;
 }
 
-.hidden-767 {
-  @include vp-767 {
+.hidden {
+  display: none;
+}
+
+.hidden-1199 {
+  @include vp-1199 {
     display: none;
   }
 }

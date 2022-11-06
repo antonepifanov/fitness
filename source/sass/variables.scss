@@ -12,11 +12,13 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-sapphire:                    #102654;
 $color-venetian-red:                #b80027;
+$color-torch-red:                   #ed0233;
 $color-dark-cerulean:               #003d85;
+$color-cobalt:                      #003eb7;
 // Gradient
 
 $conic-gradient:                    conic-gradient(from 130.31deg at 16.03% 39.06%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
-
+$from-cobalt-to-torch-red:          linear-gradient(44.89deg, $color-dark-cerulean 25.38%, $color-venetian-red 74.89%);
 // Typography
 // ---------------------------------
 
