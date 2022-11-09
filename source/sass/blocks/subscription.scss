@@ -1,0 +1,149 @@
+.subscription {
+  padding: 61px 70px;
+  max-height: 448px;
+  background-color: $color-default-white;
+  border: 7px solid $color-transparent;
+  aspect-ratio: 360 / 448;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border $trans-default;
+  z-index: 10;
+
+  @include vp-1199 {
+    padding: 61px 111px;
+    max-width: 442px;
+    max-height: unset;
+    min-height: 448px;
+    aspect-ratio: 442 / 448;
+  }
+
+  @include vp-767 {
+    padding: 48px 35px;
+    max-width: 100%;
+    min-height: 384px;
+    aspect-ratio: 290 / 384;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      border: 7px solid;
+
+      border-image-source: $from-crimson-to-smalt;
+      border-image-slice: 1;
+
+      a {
+        background: $from-torch-red-to-cobalt;
+        border: none;
+        color: $color-default-white;
+      }
+    }
+
+    &:focus-within {
+      outline: 2px solid $color-sapphire;
+      border: 7px solid;
+      border-image-source: $from-crimson-to-smalt;
+      border-image-slice: 1;
+
+      a {
+        background: $from-torch-red-to-cobalt;
+        border: none;
+        color: $color-default-white;
+      }
+    }
+  }
+
+  a {
+    margin-top: auto;
+    padding: 0;
+    border: 2px solid $color-sapphire;
+    width: 100%;
+    min-height: 64px;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $color-sapphire;
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.subscription__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 22px;
+
+  @include vp-767 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+.subscription__note {
+  line-height: 1;
+  font-style: normal;
+  color: $color-chambray;
+  margin-bottom: 96px;
+
+  @include vp-767 {
+    margin-bottom: 81px;
+  }
+}
+
+.subscription__price {
+  position: relative;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-egyptian-blue;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+
+  @include vp-767 {
+    font-size: 48px;
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    color: rgba($color-whisper, 0.48);
+
+    @include vp-767 {
+      font-size: 80px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: relative;
+    width: 30px;
+    height: 42px;
+    background-image: url("../img/svg/rouble-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include vp-767 {
+      width: 24px;
+      height: 33px;
+    }
+  }
+
+  span {
+    z-index: 20;
+  }
+}

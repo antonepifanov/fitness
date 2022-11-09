@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initValidation} from './modules/init-validation';
 import {initPlayVideo} from './modules/init-play-video';
+import {getSubscriptionsTabs} from './modules/init-tabs';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,5 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initPlayVideo();
     initPhoneMask();
     initValidation();
+    getSubscriptionsTabs();
   });
 });

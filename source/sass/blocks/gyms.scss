@@ -121,6 +121,7 @@
   }
 
   img {
+    background-color: $color-default-white;
     object-fit: cover;
     aspect-ratio: 660 / 401;
 
@@ -162,6 +163,7 @@
   }
 
   video {
+    background-color: $color-default-white;
     object-fit: cover;
     aspect-ratio: 364 / 228;
 
