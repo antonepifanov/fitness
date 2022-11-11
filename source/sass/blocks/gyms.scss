@@ -12,14 +12,14 @@
     padding-left: 120px;
   }
 
-  @include vp-1199{
+  @include vp-1199 {
     padding-top: 100px;
     padding-bottom: 183px;
     flex-direction: column;
     gap: 50px;
   }
 
-  @include vp-767{
+  @include vp-767 {
     padding-top: 70px;
     padding-bottom: 70px;
     gap: 40px;
@@ -32,13 +32,13 @@
   min-width: 330px;
   width: 355px;
 
-  @include vp-1199{
+  @include vp-1199 {
     min-width: unset;
     width: auto;
     align-items: center;
   }
 
-  @include vp-767{
+  @include vp-767 {
     align-items: flex-start;
   }
 
