@@ -3,6 +3,7 @@ import {initPhoneMask} from './modules/init-phone-mask';
 import {initValidation} from './modules/init-validation';
 import {initPlayVideo} from './modules/init-play-video';
 import {getSubscriptionsTabs} from './modules/init-tabs';
+import {initCoachesSlider} from './modules/init-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,5 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneMask();
     initValidation();
     getSubscriptionsTabs();
+    initCoachesSlider();
   });
 });

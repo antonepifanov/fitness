@@ -12,6 +12,10 @@
 @import "global/reboot";
 @import "global/container";
 
+// Swiper
+// ---------------------------------
+@import "../../node_modules/swiper/swiper";
+
 // Blocks
 // ---------------------------------
 
@@ -26,6 +30,8 @@
 @import "blocks/subscriptions";
 @import "blocks/subscription";
 @import "blocks/promo";
+@import "blocks/coaches";
+
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
