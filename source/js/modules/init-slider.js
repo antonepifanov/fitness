@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination} from 'swiper';
+import Swiper, {Navigation} from 'swiper';
 
 export const initCoachesSlider = () => {
   const coachesSliderContainer = document.querySelector('.coaches__slider');
@@ -8,14 +8,9 @@ export const initCoachesSlider = () => {
   }
 
   const coachSlider = new Swiper(coachesSliderContainer, {
-    modules: [Navigation, Pagination],
+    modules: [Navigation],
     effect: 'slide',
     loop: true,
-    loopFillGroupWithBlank: true,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
     navigation: {
       nextEl: '.coaches__button--next',
       prevEl: '.coaches__button--prev',
@@ -28,26 +23,32 @@ export const initCoachesSlider = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        initialSlide: 2,
       },
       768: {
         slidesPerView: 2,
-        slidesPerGroup: 2,
         spaceBetween: 30,
+        initialSlide: 2,
       },
       1200: {
         slidesPerView: 4,
-        slidesPerGroup: 4,
         spaceBetween: 40,
+        initialSlide: 0,
       },
     },
     on: {
+      init() {
+        const doubleSlides = coachesSliderContainer.querySelectorAll('.swiper-slide-duplicate');
+        doubleSlides.forEach((slide) => {
+          slide.setAttribute('tabindex', '-1');
+        });
+      },
       resize() {
-        this.update();
+        coachSlider.update();
       },
       orientationchange() {
-        this.update();
+        coachSlider.update();
       },
     },
   });
-  coachSlider.update();
 };
