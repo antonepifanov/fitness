@@ -64,31 +64,33 @@
     aspect-ratio: 226 / 274;
   }
 
-  &:hover {
-    justify-content: space-between;
-    box-shadow: 0px 0px 35px rgba($color-gulf-blue, 0.17);
-    padding: 55px 0;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      justify-content: space-between;
+      box-shadow: 0px 0px 35px rgba($color-gulf-blue, 0.17);
+      padding: 55px 0;
 
-    @include vp-767 {
-      padding: 45px 0;
-    }
-
-    &::before {
-      opacity: 1;
-    }
-
-    b {
-      &::after {
-        display: block;
+      @include vp-767 {
+        padding: 45px 0;
       }
-    }
 
-    .coaches__slide-list {
-      display: flex;
+      &::before {
+        opacity: 1;
+      }
+
+      b {
+        &::after {
+          display: block;
+        }
+      }
+
+      .coaches__slide-list {
+        display: flex;
+      }
     }
   }
 
-  &:focus-visible {
+  &:focus {
     outline: 2px solid $color-sapphire;
     justify-content: space-between;
     box-shadow: 0px 0px 35px rgba($color-gulf-blue, 0.17);
@@ -148,6 +150,7 @@
 
   img {
     object-fit: cover;
+    background-color: $collor-spindle;
     width: 100%;
     max-height: 100%;
     min-height: 100%;
