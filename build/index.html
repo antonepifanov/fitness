@@ -99,7 +99,7 @@
                 <source src="video/video.mp4" type="video/mp4">
               </video>
 
-              <button class="gyms__video-play button">
+              <button class="gyms__video-play button" type="button">
                 <span class="visually-hidden">Кнопка для включения видео</span>
               </button>
 
@@ -114,15 +114,15 @@
 
             <ul class="subscriptions__nav list tabs__nav">
               <li class="subscriptions__item">
-                <button class="subscriptions__button subscriptions__button--active button tabs__nav-btn">1 месяц</button>
+                <button class="subscriptions__button subscriptions__button--active button tabs__nav-btn"  type="button">1 месяц</button>
               </li>
 
               <li class="subscriptions__item">
-                <button class="subscriptions__button button tabs__nav-btn">6 месяцев</button>
+                <button class="subscriptions__button button tabs__nav-btn"  type="button">6 месяцев</button>
               </li>
 
               <li class="subscriptions__item">
-                <button class="subscriptions__button button tabs__nav-btn">12 месяцев</button>
+                <button class="subscriptions__button button tabs__nav-btn"  type="button">12 месяцев</button>
               </li>
             </ul>
 
@@ -635,10 +635,29 @@
               </ul>
             </div>
           </div>
-
-
-
         </section>
+
+        <div class="connection">
+          <div class="connection__inner container">
+            <section class="connection__free free">
+              <h2 class="title">Бесплатное занятие</h2>
+
+              <form class="free__form" action="" method="post" autocomplete="off">
+                <div class="free__form-item">
+                  <label class="visually-hidden" for="name">Введите Ваше имя</label>
+                  <input type="text" id="name" name="name" placeholder="Имя">
+                </div>
+
+                <div class="free__form-item">
+                  <label class="visually-hidden" for="tel">Введите Ваш телефон</label>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон">
+                </div>
+
+                <button class="button" type="submit">Отправить</button>
+              </form>
+            </section>
+          </div>
+        </div>
       </main>
     </div>
 
