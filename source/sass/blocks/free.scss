@@ -1,0 +1,113 @@
+.free {
+  padding-right: 170px;
+  padding-bottom: 70px;
+
+  @include vp-1199 {
+    background-color: $color-sapphire;
+    padding-right: 163px;
+  }
+
+  h2 {
+    font-weight: 800;
+    line-height: 1.56;
+    color: $color-default-white;
+    margin-bottom: 24px;
+
+    @include vp-1199 {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 50px;
+    }
+
+    @include vp-767 {
+      font-weight: 600;
+    }
+  }
+}
+
+.free__form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include vp-1199 {
+    column-gap: 60px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  button {
+    width: 100%;
+    min-height: 52px;
+    border: 3px solid $color-default-white;
+    color: $color-default-white;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        background-color: $color-default-white;
+        color: $color-sapphire;
+      }
+
+      &:focus-visible {
+        outline: 1px solid $color-default-white;
+        outline-offset: 3px;
+        background-color: $color-default-white;
+        color: $color-sapphire;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.free__form-item {
+  flex-grow: 1;
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    height: 22px;
+    padding: 0 0 10px;
+    border: none;
+    border-bottom: 1px solid $color-light-slate-grey;
+    background-color: $color-transparent;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-default-white;
+    transition: border-color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        border-bottom: 1px solid $color-default-white;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $color-default-white;
+      outline-offset: 5px;
+      border-bottom: 1px solid $color-default-white;
+
+      &::placeholder {
+        transform: scale(0);
+      }
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1;
+      color: $color-light-slate-grey;
+      transform-origin: left center;
+      transition: transform $trans-default;
+    }
+  }
+}

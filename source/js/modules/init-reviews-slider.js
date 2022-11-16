@@ -7,7 +7,7 @@ export const initReviewsSlider = () => {
     return;
   }
 
-  const coachSlider = new Swiper(reviewsSliderContainer, {
+  const reviewsSlider = new Swiper(reviewsSliderContainer, {
     modules: [Navigation],
     effect: 'slide',
     slidesPerView: 1,
@@ -22,10 +22,10 @@ export const initReviewsSlider = () => {
     },
     on: {
       resize() {
-        coachSlider.update();
+        reviewsSlider.update();
       },
       orientationchange() {
-        coachSlider.update();
+        reviewsSlider.update();
       },
     },
   });
