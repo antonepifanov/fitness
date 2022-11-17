@@ -2200,6 +2200,8 @@ button,
 }
 
 .reviews__slide-image img {
+  background-color: #00359f;
+  border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover;
   aspect-ratio: 1 /1;
