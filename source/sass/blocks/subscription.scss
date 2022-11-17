@@ -11,7 +11,7 @@
   z-index: 10;
 
   @include vp-1199 {
-    padding: 61px 111px;
+    padding: 58px 111px 61px;
     max-width: 442px;
     max-height: unset;
     min-height: 448px;
@@ -19,7 +19,7 @@
   }
 
   @include vp-767 {
-    padding: 48px 35px;
+    padding: 45px 35px 48px;
     max-width: 100%;
     min-height: 384px;
     aspect-ratio: 290 / 384;
@@ -81,11 +81,11 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   @include vp-767 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 }
 
@@ -93,10 +93,10 @@
   line-height: 1;
   font-style: normal;
   color: $color-chambray;
-  margin-bottom: 96px;
+  margin-bottom: 80px;
 
   @include vp-767 {
-    margin-bottom: 81px;
+    margin-bottom: 71px;
   }
 }
 
@@ -117,7 +117,7 @@
   &::before {
     position: absolute;
     content: attr(data-price);
-    top: -50px;
+    top: -31px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 100px;

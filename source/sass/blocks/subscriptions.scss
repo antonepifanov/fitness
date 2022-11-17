@@ -15,7 +15,7 @@
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
   }
 
@@ -50,10 +50,12 @@
   align-items: center;
 
   h2 {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 
     @include vp-767 {
-      margin-bottom: 35px;
+      position: relative;
+      left: -5px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -61,11 +63,11 @@
 .subscriptions__nav {
   position: relative;
   display: flex;
-  gap: 46px;
-  margin-bottom: 39px;
+  gap: 40px;
+  margin-bottom: 36px;
 
   @include vp-1199 {
-    gap: 54px;
+    gap: 43px;
     margin-bottom: 45px;
   }
 
@@ -73,7 +75,7 @@
     max-width: 100%;
     gap: 35px;
     justify-content: space-between;
-    margin-bottom: 90px;
+    margin-bottom: 35px;
   }
 
   &::after {
@@ -96,7 +98,7 @@
   padding: 0;
   border: none;
   border-bottom: 2px solid $color-transparent;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   transition: color $trans-default, border $trans-default;
 
   @include vp-1199 {
@@ -105,6 +107,7 @@
 
   @include vp-767 {
     font-size: 16px;
+    padding-bottom: 15px;
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {

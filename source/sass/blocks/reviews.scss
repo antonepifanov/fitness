@@ -11,7 +11,7 @@
   }
 
   @include vp-1199 {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
     padding-left: 101px;
     padding-right: 101px;
@@ -19,7 +19,7 @@
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
     padding-left: 47px;
     padding-right: 47px;
@@ -29,7 +29,11 @@
     margin-bottom: 37px;
 
     @include vp-1199 {
-      margin-bottom: 50px;
+      margin-bottom: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 43px;
     }
   }
 
@@ -41,7 +45,7 @@
 
 .reviews__inner {
   position: relative;
-  box-shadow: 0px 0px 40px 0px rgba($color-resolution-blue, 0.2);
+  box-shadow: 0 0 40px 0 rgba($color-resolution-blue, 0.2);
   max-width: 560px;
 
   @include vp-1199 {
@@ -52,7 +56,6 @@
 .reviews__button {
   position: absolute;
   margin: 0;
-  top: 0;
   bottom: 0;
   width: 16px;
   height: 32px;
@@ -83,18 +86,18 @@
   }
 
   &--prev {
-    left: -48px;
+    left: -56px;
 
     @include vp-767 {
-      left: -27px;
+      left: -32px;
     }
   }
 
   &--next {
-    right: -48px;
+    right: -56px;
 
     @include vp-767 {
-      right: -27px;
+      right: -32px;
     }
 
     svg {
@@ -114,25 +117,25 @@
 
 .reviews__slide {
   background-color: $color-resolution-blue;
-  padding: 62px;
+  padding: 58px;
   height: auto;
   display: grid;
   grid-template-columns: 80px 1fr;
   grid-template-rows: repeat(2, auto);
   column-gap: 28px;
-  row-gap: 25px;
+  row-gap: 19px;
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 62px 65px;
+    padding: 58px 65px;
   }
 
   @include vp-767 {
-    padding: 40px 25px;
+    padding: 40px 25px 34px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 68px auto;
     column-gap: 0;
-    row-gap: 20px;
+    row-gap: 15px;
   }
 
   b {

@@ -16,11 +16,13 @@
     @include vp-1199 {
       font-weight: 700;
       line-height: 1.2;
-      margin-bottom: 50px;
+      margin-bottom: 36px;
+      left: 0;
     }
 
     @include vp-767 {
       font-weight: 600;
+      margin-bottom: 38px;
     }
   }
 }
@@ -29,20 +31,22 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
 
   @include vp-1199 {
     column-gap: 60px;
+    row-gap: 27px;
   }
 
   @include vp-767 {
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
   }
 
   button {
     width: 100%;
     min-height: 52px;
+    font-size: 14px;
     border: 3px solid $color-default-white;
     color: $color-default-white;
 
