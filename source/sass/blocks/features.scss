@@ -23,11 +23,15 @@
     position: static;
     padding-top: 90px;
     padding-bottom: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @include vp-767 {
     padding-top: 64px;
     padding-bottom: 70px;
+    display: block;
   }
 
   h2 {
@@ -60,43 +64,15 @@
     grid-template-rows: auto minmax(240px, auto) auto;
     column-gap: 33px;
     row-gap: 42px;
+    max-width: 678px;
     padding-left: 0;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    max-width: unset;
     row-gap: 41px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: calc((100% - 120px - 240px) / 2);
-    height: 2px;
-    background-color: rgba($color-crimson, 0.2);
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
-    width: calc((100% - 120px - 240px) / 2);
-    height: 2px;
-    background-color: rgba($color-crimson, 0.2);
-
-    @include vp-1199 {
-      display: none;
-    }
   }
 }
 
@@ -201,6 +177,42 @@
     .features__item-description {
       font-weight: 400;
       text-align: center;
+    }
+  }
+
+  &:first-child {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -75px;
+      left: -10px;
+      width: calc(100% + 10px);
+      height: 2px;
+      background-color: rgba($color-crimson, 0.2);
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -75px;
+      right: -10px;
+      width: calc(100% + 10px);
+      height: 2px;
+      background-color: rgba($color-crimson, 0.2);
+
+      @include vp-1199 {
+        display: none;
+      }
     }
   }
 }

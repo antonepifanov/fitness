@@ -48,10 +48,12 @@
   border: 7px solid transparent;
   border-image-source: $from-crimson-to-smalt;
   border-image-slice: 1;
+  min-height: 211px;
 
   &--accent {
     grid-row: 1 / -1;
     border: none;
+    min-height: unset;
 
     @include vp-1199 {
       grid-row: 1 /2;
@@ -104,6 +106,7 @@
   flex-direction: column;
   gap: 10px;
   color: $color-resolution-blue;
+  margin-bottom: 15px;
 
   @include vp-767 {
     align-items: center;

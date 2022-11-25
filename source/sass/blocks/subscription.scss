@@ -1,6 +1,6 @@
 .subscription {
-  padding: 61px 70px;
-  max-height: 448px;
+  padding: 61px 20px;
+  height: 100%;
   background-color: $color-default-white;
   border: 7px solid $color-transparent;
   aspect-ratio: 360 / 448;
@@ -59,6 +59,11 @@
     border: 2px solid $color-sapphire;
     width: 100%;
     min-height: 64px;
+    max-width: 206px;
+
+    @include vp-1199 {
+      max-width: unset;
+    }
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover {
@@ -107,7 +112,7 @@
   line-height: 1;
   color: $color-egyptian-blue;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 14px;
 
   @include vp-767 {
@@ -117,7 +122,7 @@
   &::before {
     position: absolute;
     content: attr(data-price);
-    top: -31px;
+    top: -41px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 100px;
@@ -131,11 +136,13 @@
   &::after {
     content: "";
     position: relative;
+    top: -10px;
     width: 30px;
     height: 42px;
     background-image: url("../img/svg/rouble-icon.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    flex-shrink: 0;
 
     @include vp-767 {
       width: 24px;
@@ -145,5 +152,6 @@
 
   span {
     z-index: 20;
+    word-break: break-all;
   }
 }

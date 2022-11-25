@@ -19,7 +19,7 @@
 .promo__main {
   padding: 87px 78px 74px;
   background-color: $color-torch-red;
-  min-width: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   color: $color-default-white;
@@ -27,12 +27,12 @@
 
   @include vp-1199 {
     padding: 51px 45px 38px;
-    min-width: 292px;
+    width: 292px;
   }
 
   @include vp-767 {
     padding: 51px 45px;
-    min-width: unset;
+    width: unset;
   }
 
   p {
@@ -169,6 +169,7 @@
 .promo__image {
   margin: 0;
   display: flex;
+  overflow: hidden;
 
   @include vp-1199 {
     aspect-ratio: 386 / 292;
@@ -182,5 +183,10 @@
     width: 100%;
     min-height: 100%;
     object-fit: cover;
+
+    @include vp-767 {
+      transform: scale(1.15);
+      object-position: center 18px;
+    }
   }
 }

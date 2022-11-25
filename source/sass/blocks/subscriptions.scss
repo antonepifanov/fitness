@@ -134,7 +134,7 @@
 
 .subscriptions__list {
   display: none;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, calc((100% - 80px) / 3));
   gap: 40px;
 
   @include vp-1199 {

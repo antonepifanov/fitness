@@ -119,6 +119,7 @@
 .gyms__image {
   margin: 0;
   display: grid;
+  overflow: hidden;
 
   @include vp-767 {
     margin-bottom: 40px;
@@ -132,7 +133,6 @@
 
     @include vp-1199 {
       width: 100%;
-      object-position: top;
       aspect-ratio: 678 / 345;
     }
 

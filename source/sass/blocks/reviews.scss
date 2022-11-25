@@ -61,8 +61,7 @@
   height: 32px;
   padding: 0;
   border: none;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 105px;
   color: $color-dark-gray;
 
   @include vp-767 {
@@ -121,7 +120,7 @@
   height: auto;
   display: grid;
   grid-template-columns: 80px 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: max-content auto;
   column-gap: 28px;
   row-gap: 19px;
   color: $color-default-white;
