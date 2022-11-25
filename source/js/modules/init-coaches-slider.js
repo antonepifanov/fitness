@@ -31,6 +31,7 @@ export const initCoachesSlider = () => {
         initialSlide: 2,
       },
       1200: {
+        centeredSlides: false,
         slidesPerView: 4,
         spaceBetween: 40,
         initialSlide: 0,
@@ -38,9 +39,15 @@ export const initCoachesSlider = () => {
     },
     on: {
       init() {
+        const slides = coachesSliderContainer.querySelectorAll('.swiper-slide');
         const doubleSlides = coachesSliderContainer.querySelectorAll('.swiper-slide-duplicate');
         doubleSlides.forEach((slide) => {
           slide.setAttribute('tabindex', '-1');
+        });
+        slides.forEach((slide) => {
+          slide.addEventListener('focus', () => {
+            coachSlider.slideToLoop(`${slide.dataset.swiperSlideIndex}`, 0, false);
+          });
         });
       },
       resize() {
