@@ -41,12 +41,17 @@ export const initCoachesSlider = () => {
       init() {
         const slides = coachesSliderContainer.querySelectorAll('.swiper-slide');
         const doubleSlides = coachesSliderContainer.querySelectorAll('.swiper-slide-duplicate');
+        const slidesLength = slides.length / 2;
         doubleSlides.forEach((slide) => {
           slide.setAttribute('tabindex', '-1');
         });
         slides.forEach((slide) => {
           slide.addEventListener('focus', () => {
-            coachSlider.slideToLoop(`${slide.dataset.swiperSlideIndex}`, 0, false);
+            const index = slide.dataset.swiperSlideIndex;
+            if (slidesLength - index >= 4) {
+              coachSlider.slideToLoop(`${index}`, 300, true);
+            }
+
           });
         });
       },
